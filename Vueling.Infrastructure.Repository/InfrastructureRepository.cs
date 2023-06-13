@@ -19,34 +19,38 @@ namespace Vueling.Infrastructure.Repository
             {
                 connection.Open();
 
+                /*
                 SqlCommand command = new SqlCommand(@"
-            SELECT 
-                invoice.ID,
-                invoice.date,
-                invoice.order_number,
-                invoice.expiry_date,
-                invoice.subtotal_price,
-                invoice.discount,
-                invoice.tax_percentage,
-                invoice.total_price,
-                entityFrom.ID AS EntityFromId,
-                entityFrom.name AS EntityFromName,
-                entityFrom.address AS EntityFromAddress,
-                entityFrom.phone_number AS EntityFromPhone,
-                entityFrom.email AS EntityFromEmail,
-                entityTo.ID AS EntityToId,
-                entityTo.name AS EntityToName,
-                entityTo.address AS EntityToAddress,
-                entityTo.phone_number AS EntityToPhone,
-                entityTo.email AS EntityToEmail,
-                product.ID AS ProductId,
-                product.description AS ProductDescription
-            FROM invoice 
-            INNER JOIN entity entityFrom ON invoice.entity_from = entityFrom.ID
-            INNER JOIN entity entityTo ON invoice.entity_to = entityTo.ID
-            INNER JOIN invoice_product invoiceProduct ON invoice.ID = invoiceProduct.invoice_id
-            INNER JOIN product ON invoiceProduct.product_id = product.ID",
-                    connection);
+                SELECT 
+                    invoice.ID,
+                    invoice.date,
+                    invoice.order_number,
+                    invoice.expiry_date,
+                    invoice.subtotal_price,
+                    invoice.discount,
+                    invoice.tax_percentage,
+                    invoice.total_price,
+                    entityFrom.ID AS EntityFromId,
+                    entityFrom.name AS EntityFromName,
+                    entityFrom.address AS EntityFromAddress,
+                    entityFrom.phone_number AS EntityFromPhone,
+                    entityFrom.email AS EntityFromEmail,
+                    entityTo.ID AS EntityToId,
+                    entityTo.name AS EntityToName,
+                    entityTo.address AS EntityToAddress,
+                    entityTo.phone_number AS EntityToPhone,
+                    entityTo.email AS EntityToEmail,
+                    product.ID AS ProductId,
+                    product.description AS ProductDescription
+                FROM invoice 
+                INNER JOIN entity entityFrom ON invoice.entity_from = entityFrom.ID
+                INNER JOIN entity entityTo ON invoice.entity_to = entityTo.ID
+                INNER JOIN invoice_product invoiceProduct ON invoice.ID = invoiceProduct.invoice_id
+                INNER JOIN product ON invoiceProduct.product_id = product.ID",
+                connection);
+                */
+
+                SqlCommand command = new SqlCommand("SELECT * FROM InvoiceView", connection);
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
