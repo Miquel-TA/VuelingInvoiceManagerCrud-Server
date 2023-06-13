@@ -7,21 +7,21 @@ namespace Vueling.Api.WCF
 {
     public class Service1 : IService1
     {
-        private readonly BusinessLogic BusinessLogic = new BusinessLogic();
+        private readonly Logic BusinessLogic = new Logic();
 
         public List<Invoice> GetAllInvoices()
         {
-            return BusinessLogic.GetAllInvoices();
+            return BusinessLogic.GetAll();
         }
 
-        public int AddInvoice(Invoice invoice)
+        public int InsertInvoice(Invoice invoice)
         {
-            return BusinessLogic.AddInvoice(invoice);
+            return BusinessLogic.Insert(invoice);
         }
 
-        public bool RemoveInvoice(int invoiceToDelete)
+        public bool DeleteInvoice(int invoiceToDelete)
         {
-            return BusinessLogic.DeleteInvoice(invoiceToDelete);
+            return BusinessLogic.Delete(invoiceToDelete);
         }
     }
 }

@@ -9,10 +9,10 @@ namespace Vueling.Api.WCF
     public interface IService1
     {
         [OperationContract]
-        int AddInvoice(Invoice invoice);
+        int InsertInvoice(Invoice invoice);
 
         [OperationContract]
-        bool RemoveInvoice(int invoiceToDelete);
+        bool DeleteInvoice(int invoiceToDelete);
 
         [OperationContract]
         List<Invoice> GetAllInvoices();
