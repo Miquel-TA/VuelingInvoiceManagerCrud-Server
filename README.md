@@ -9,6 +9,4 @@ Run the database script.
 Run the database view script.
 
 
-![image](https://github.com/Miquel-TA/VuelingInvoiceManagerCrud-Server/assets/134692660/40e5d772-545c-436e-bed1-32849d0af2cf)
-
-
+![image](https://github.com/Miquel-TA/VuelingInvoiceManagerCrud-Server/assets/134692660/10208055-7d8c-4f7e-9ce2-dbc483c04791)
