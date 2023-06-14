@@ -25,7 +25,6 @@ namespace Vueling.Infrastructure.Repository
             return DeleteInvoice(invoiceId);
         }
 
-
         private int InsertInvoice(Invoice invoice)
         {
             using (SqlConnection connection = new SqlConnection(ConnectionString))

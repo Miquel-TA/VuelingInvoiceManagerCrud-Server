@@ -51,7 +51,6 @@
     <Compile Include="Log4Net.cs" />
     <Compile Include="models\Entity.cs" />
     <Compile Include="models\Product.cs" />
-    <Compile Include="LoggerOld.cs" />
     <Compile Include="models\Invoice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

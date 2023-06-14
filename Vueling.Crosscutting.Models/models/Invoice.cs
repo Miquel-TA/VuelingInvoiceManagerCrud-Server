@@ -39,7 +39,7 @@ namespace Vueling.Crosscutting.Models
         public Entity EntityTo { get; set; }
 
         [DataMember]
-        public List<Product> Products { get; set; } = new List<Product>();
+        public List<Product> Products { get; set; }
 
         public override string ToString()
         {
